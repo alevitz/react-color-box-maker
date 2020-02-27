@@ -20,9 +20,7 @@ function NewBoxForm({ addBox }) {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-
     addBox(formData);
-
     setFormData(initialData);
   }
 

@@ -4,13 +4,14 @@ import './Box.css';
 function Box({ width, height, backgroundColor, remove }) {
 
   let style = {
-    width,
-    height,
+    width: `${width}px`,
+    height: `${height}px`,
     backgroundColor
   };
 
   return (
-    <div style={style} >
+    <div>
+    <div style={style} className="Box"></div>
     <button className="Box-button" onClick={remove}>X</button>  
     </div>
   );
