@@ -24,21 +24,33 @@ function NewBoxForm({ addBox }) {
     setFormData(initialData);
   }
 
-
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="width"> Width: </label>
-      <input name="width" id="width" value={formData.width} onChange={handleChange} />
-      <label htmlFor="height"> Height: </label>
-      <input name="height" id="height" value={formData.height} onChange={handleChange} />
-      <label htmlFor="backgroundColor"> Background Color: </label>
-      <input name="backgroundColor" id="backgroundColor" value={formData.backgroundColor} onChange={handleChange} />
+    <form onSubmit={handleSubmit} data-testid='newBoxForm'>
+      <label htmlFor="width">Width: </label>
+      <input
+        name="width"
+        id="width"
+        value={formData.width}
+        onChange={handleChange} />
+
+      <label htmlFor="height">Height: </label>
+      <input
+        name="height"
+        id="height"
+        value={formData.height}
+        onChange={handleChange} />
+
+      <label htmlFor="backgroundColor">Background Color: </label>
+      <input
+        name="backgroundColor"
+        id="backgroundColor"
+        value={formData.backgroundColor}
+        onChange={handleChange} />
+
       <button>Submit</button>
     </form>
-  )
+  );
 }
-
-
 
 
 export default NewBoxForm;
